@@ -1,3 +1,4 @@
+console.log("Starting webhook server...");
 import express from "express";
 import { prisma } from "@repo/db";
 const app = express();
@@ -17,9 +18,9 @@ app.post("/hdfcWebhook", async (req, res) => {
         userId: req.body.user_identifier,
         amount: req.body.amount
     };
-
     try {
         await prisma.$transaction([
+            
             prisma.balance.updateMany({
                 where: {
                     userId: Number(paymentInformation.userId)
@@ -52,5 +53,8 @@ app.post("/hdfcWebhook", async (req, res) => {
     }
 
 })
+console.log("About to start Express...");
 
-app.listen(3003);
+app.listen(3003, () => {
+  console.log("Server running on port 3003 ");
+});
