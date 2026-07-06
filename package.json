@@ -9,7 +9,11 @@
     "check-types": "turbo run check-types"
   },
   "devDependencies": {
+    "@types/node": "^25.9.2",
+    "@types/pg": "^8.20.0",
     "prettier": "^3.7.4",
+    "prisma": "^6.19.3",
+    "tsx": "^4.22.3",
     "turbo": "^2.9.16",
     "typescript": "5.9.2"
   },
@@ -20,5 +24,14 @@
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "dependencies": {
+    "@prisma/adapter-pg": "^7.8.0",
+    "@prisma/client": "^6.19.3",
+    "@tailwindcss/postcss": "^4.3.0",
+    "dotenv": "^17.4.2",
+    "pg": "^8.21.0",
+    "postcss": "^8.5.15",
+    "tailwindcss": "^4.3.0"
+  }
 }
