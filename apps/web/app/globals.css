@@ -1,0 +1,11 @@
+/* @import "tailwindcss"; */
+
+/* @import "tailwindcss"; */
+/* @import "@repo/tailwind-config"; */
+
+@import "tailwindcss";
+
+@source "../../../packages/ui/src";
+@source "../../../packages/ui/dist";
+@import "@repo/tailwind-config";
+
